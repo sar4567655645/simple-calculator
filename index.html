@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Calculator - Advanced Web Calculator</title>
+    <meta name="description" content="A premium, feature-rich web calculator with advanced scientific functions, sleek dark mode glassmorphism, and full keyboard support.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- Header -->
+        <header>
+            <h1 id="calc-title">PRO CALCULATOR</h1>
+        </header>
+
+        <!-- Display Screen -->
+        <div class="display-container">
+            <div id="display" class="display-text" aria-live="polite">0</div>
+        </div>
+
+        <!-- Buttons Grid -->
+        <div class="buttons-grid">
+            <!-- Row 0: Advanced functions -->
+            <button class="btn btn-adv" id="btn-sin" onclick="addToExpression('sin(')">sin</button>
+            <button class="btn btn-adv" id="btn-cos" onclick="addToExpression('cos(')">cos</button>
+            <button class="btn btn-adv" id="btn-tan" onclick="addToExpression('tan(')">tan</button>
+            <button class="btn btn-adv" id="btn-log" onclick="addToExpression('log(')">log</button>
+
+            <!-- Row 1: Scientific helper -->
+            <button class="btn btn-adv" id="btn-sqrt" onclick="addToExpression('sqrt(')">√</button>
+            <button class="btn btn-adv" id="btn-paren-open" onclick="addToExpression('(')">(</button>
+            <button class="btn btn-adv" id="btn-paren-close" onclick="addToExpression(')')">)</button>
+            <button class="btn btn-adv" id="btn-pow" onclick="addToExpression('^')">^</button>
+
+            <!-- Row 2: Standard helpers / Operators -->
+            <button class="btn btn-func" id="btn-ac" onclick="clearExpression()">AC</button>
+            <button class="btn btn-func" id="btn-backspace" onclick="backspaceExpression()">⌫</button>
+            <button class="btn btn-func" id="btn-pi" onclick="addToExpression('π')">π</button>
+            <button class="btn btn-op" id="btn-div" onclick="addToExpression('/')">÷</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-num" id="btn-7" onclick="addToExpression('7')">7</button>
+            <button class="btn btn-num" id="btn-8" onclick="addToExpression('8')">8</button>
+            <button class="btn btn-num" id="btn-9" onclick="addToExpression('9')">9</button>
+            <button class="btn btn-op" id="btn-mul" onclick="addToExpression('*')">×</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-num" id="btn-4" onclick="addToExpression('4')">4</button>
+            <button class="btn btn-num" id="btn-5" onclick="addToExpression('5')">5</button>
+            <button class="btn btn-num" id="btn-6" onclick="addToExpression('6')">6</button>
+            <button class="btn btn-op" id="btn-sub" onclick="addToExpression('-')">-</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-num" id="btn-1" onclick="addToExpression('1')">1</button>
+            <button class="btn btn-num" id="btn-2" onclick="addToExpression('2')">2</button>
+            <button class="btn btn-num" id="btn-3" onclick="addToExpression('3')">3</button>
+            <button class="btn btn-op" id="btn-add" onclick="addToExpression('+')">+</button>
+
+            <!-- Row 6 -->
+            <button class="btn btn-num btn-double" id="btn-0" onclick="addToExpression('0')">0</button>
+            <button class="btn btn-num" id="btn-dot" onclick="addToExpression('.')">.</button>
+            <button class="btn btn-op" id="btn-equal" onclick="evaluateExpression()">=</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
